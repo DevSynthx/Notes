@@ -9,14 +9,15 @@ import Foundation
 import SwiftUI
 import UIKit
 
-extension [SampleModel] {
-    var type: ModelType {
+extension [NoteModel] {
+    var type: NoteType {
         if let firstModel = self.first {
             return firstModel.type
         }
-        return .all
+        return .work
     }
 }
+
 
 
 

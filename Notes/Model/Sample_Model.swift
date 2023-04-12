@@ -24,70 +24,89 @@ enum ModelType: String, CaseIterable {
     var tabID: String {
         return self.rawValue + self.rawValue.prefix(4)
     }
-    
-    
 }
 
 
-var sampleModel: [SampleModel] = [
+struct NoteModel: Identifiable, Hashable {
+    var id = UUID()
+    var title : String
+    var content: String
+    var createdAt: Date
+    var type : NoteType
+}
 
-    SampleModel(title: "All", content: "This is COntent 1", type: .all),
-    SampleModel(title: "All", content: "This is COntent 2",type: .all),
-    SampleModel(title: "All", content: "This is COntent 3", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
-    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+enum NoteType: String, CaseIterable {
+    case all = "#All"
+    case work = "#Work"
+    case personal = "#Personal"
+    case sport = "#Sport"
     
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
-    
+    var tabID: String {
+        return self.rawValue + self.rawValue.prefix(4)
+    }
+}
 
-
-]
+//
+//
+//var sampleModel: [SampleModel] = [
+//
+//    SampleModel(title: "All", content: "This is COntent 1", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 2",type: .all),
+//    SampleModel(title: "All", content: "This is COntent 3", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//    SampleModel(title: "All", content: "This is COntent 4", type: .all),
+//
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Work", content: "This is COntent 4", type: .work),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Personal", content: "This is COntent 4", type: .personal),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//    SampleModel(title: "Sport", content: "This is COntent 4", type: .sport),
+//
+//
+//
+//]

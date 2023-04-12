@@ -13,4 +13,7 @@ static let tiltNeon = "TiltNeon-Regular"
 static let shantellReg = "ShantellSans-Regular"
 static let shantellMed = "ShantellSans-Medium"
 static let shantellLit = "ShantellSans-Light"
+static let alkatra = "Alkatra-Medium"
 }
+
+

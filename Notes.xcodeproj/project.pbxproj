@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C224A7E29BCDA4F0028D141 /* view_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224A7D29BCDA4F0028D141 /* view_model.swift */; };
 		0C9701FD29B5021200845835 /* TiltNeon-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C9701FC29B5021200845835 /* TiltNeon-Regular.ttf */; };
-		0C97020029B5439500845835 /* Details_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9701FF29B5439500845835 /* Details_View.swift */; };
+		0C97020029B5439500845835 /* CreateNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9701FF29B5439500845835 /* CreateNoteView.swift */; };
+		0CD58C6429E2EA35008C5101 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD58C6329E2EA35008C5101 /* extension.swift */; };
+		0CD58C6829E37056008C5101 /* Alkatra-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CD58C6729E37056008C5101 /* Alkatra-Medium.ttf */; };
+		0CD58C6A29E37920008C5101 /* Details_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD58C6929E37920008C5101 /* Details_View.swift */; };
 		0CE29D3929B3E73C00B3601E /* ShantellSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CE29D3829B3E73C00B3601E /* ShantellSans-Light.ttf */; };
 		0CE29D3E29B3E76700B3601E /* ShantellSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CE29D3B29B3E76700B3601E /* ShantellSans-Medium.ttf */; };
 		0CE29D3F29B3E76700B3601E /* ShantellSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CE29D3C29B3E76700B3601E /* ShantellSans-Regular.ttf */; };
@@ -23,8 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C224A7D29BCDA4F0028D141 /* view_model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view_model.swift; sourceTree = "<group>"; };
 		0C9701FC29B5021200845835 /* TiltNeon-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TiltNeon-Regular.ttf"; sourceTree = "<group>"; };
-		0C9701FF29B5439500845835 /* Details_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details_View.swift; sourceTree = "<group>"; };
+		0C9701FF29B5439500845835 /* CreateNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteView.swift; sourceTree = "<group>"; };
+		0CD58C6329E2EA35008C5101 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		0CD58C6729E37056008C5101 /* Alkatra-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Alkatra-Medium.ttf"; path = "../../../../Downloads/Alkatra/static/Alkatra-Medium.ttf"; sourceTree = "<group>"; };
+		0CD58C6929E37920008C5101 /* Details_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details_View.swift; sourceTree = "<group>"; };
 		0CE29D3829B3E73C00B3601E /* ShantellSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ShantellSans-Light.ttf"; sourceTree = "<group>"; };
 		0CE29D3B29B3E76700B3601E /* ShantellSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ShantellSans-Medium.ttf"; sourceTree = "<group>"; };
 		0CE29D3C29B3E76700B3601E /* ShantellSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ShantellSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -51,12 +59,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C224A7C29BCDA310028D141 /* View_Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C224A7D29BCDA4F0028D141 /* view_model.swift */,
+			);
+			path = View_Model;
+			sourceTree = "<group>";
+		};
 		0C9701FE29B5437D00845835 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C9701FF29B5439500845835 /* Details_View.swift */,
+				0C9701FF29B5439500845835 /* CreateNoteView.swift */,
+				0CD58C6929E37920008C5101 /* Details_View.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0CD58C6229E2EA0E008C5101 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				0CD58C6329E2EA35008C5101 /* extension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		0CE29D3329B3E6C700B3601E /* Fonts */ = {
@@ -64,6 +89,7 @@
 			children = (
 				0CE29D3829B3E73C00B3601E /* ShantellSans-Light.ttf */,
 				0C9701FC29B5021200845835 /* TiltNeon-Regular.ttf */,
+				0CD58C6729E37056008C5101 /* Alkatra-Medium.ttf */,
 				0CE29D3B29B3E76700B3601E /* ShantellSans-Medium.ttf */,
 				0CE29D4029B3E77B00B3601E /* ClimateCrisis-Regular.ttf */,
 				0CE29D3C29B3E76700B3601E /* ShantellSans-Regular.ttf */,
@@ -114,6 +140,8 @@
 		0CE46BDF29AC20ED00D6E038 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				0CD58C6229E2EA0E008C5101 /* extension */,
+				0C224A7C29BCDA310028D141 /* View_Model */,
 				0C9701FE29B5437D00845835 /* Views */,
 				0CE29D4929B41DA700B3601E /* Helpers */,
 				0CE29D4629B413CF00B3601E /* Model */,
@@ -198,6 +226,7 @@
 				0CE29D3F29B3E76700B3601E /* ShantellSans-Regular.ttf in Resources */,
 				0CE29D4129B3E77B00B3601E /* ClimateCrisis-Regular.ttf in Resources */,
 				0CE29D3929B3E73C00B3601E /* ShantellSans-Light.ttf in Resources */,
+				0CD58C6829E37056008C5101 /* Alkatra-Medium.ttf in Resources */,
 				0CE46BE529AC20EE00D6E038 /* Assets.xcassets in Resources */,
 				0CE29D3E29B3E76700B3601E /* ShantellSans-Medium.ttf in Resources */,
 				0C9701FD29B5021200845835 /* TiltNeon-Regular.ttf in Resources */,
@@ -213,10 +242,13 @@
 			files = (
 				0CE46BE329AC20ED00D6E038 /* ContentView.swift in Sources */,
 				0CE46BE129AC20ED00D6E038 /* NotesApp.swift in Sources */,
+				0CD58C6A29E37920008C5101 /* Details_View.swift in Sources */,
 				0CE29D4529B3F5F800B3601E /* Constants.swift in Sources */,
 				0CE29D4829B413E600B3601E /* Sample_Model.swift in Sources */,
 				0CE29D4B29B41DB500B3601E /* helpers.swift in Sources */,
-				0C97020029B5439500845835 /* Details_View.swift in Sources */,
+				0C224A7E29BCDA4F0028D141 /* view_model.swift in Sources */,
+				0C97020029B5439500845835 /* CreateNoteView.swift in Sources */,
+				0CD58C6429E2EA35008C5101 /* extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
