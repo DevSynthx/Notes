@@ -9,6 +9,16 @@ import Foundation
 import SwiftUI
 import UIKit
 
+extension [Todo] {
+    var type: Todo.TodoType {
+        if let firstModel = self.first {
+            return Todo.TodoType(rawValue: firstModel.type)!
+        }
+        return .work
+    }
+}
+
+/*
 extension [NoteModel] {
     var type: NoteType {
         if let firstModel = self.first {
@@ -17,6 +27,7 @@ extension [NoteModel] {
         return .work
     }
 }
+ */
 
 
 

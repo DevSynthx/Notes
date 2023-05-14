@@ -44,7 +44,19 @@ enum NoteType: String, CaseIterable {
     var tabID: String {
         return self.rawValue + self.rawValue.prefix(4)
     }
+
 }
+
+
+    enum Stuff: String, CaseIterable {
+        case first = "First"
+        case second = "Second"
+        case third = "Third"
+        case forth = "Forth"
+    }
+
+
+var displayText = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
 
 //
 //

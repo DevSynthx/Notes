@@ -6,16 +6,21 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct CreateNoteView: View {
     @State var title: String = ""
     @State var content: String = ""
-    @State var isSelected: NoteType = .personal
+    @State var isSelected: Todo.TodoType = .personal
     @State private var screenH = UIScreen.main.bounds.height
-    @EnvironmentObject var vm : NoteViewModel
-    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var noteVm : NotesViewModel
+    @StateObject var vm = CreateNoteViewModel()
+    
+    
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         ZStack{
+            
             Color(.black)
                 .ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: false){
@@ -35,26 +40,44 @@ struct CreateNoteView: View {
                                 .cornerRadius(10)
                             }
                             .onTapGesture {
-                                presentationMode.wrappedValue.dismiss()
+                                dismiss()
                             }
                     
                         Spacer()
                         Button {
+                         
                             
                             if title.isEmpty || content.isEmpty{
                                 return
                             } else{
-                                vm.addNote(title: title.trimmingCharacters(in: .whitespacesAndNewlines), content: content, type: isSelected)
-                                presentationMode.wrappedValue.dismiss()
+                                if !vm.resultState.isLoading{
+                                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                                    Task{
+                                         try await vm.createNote(title:title.trimmingCharacters(in: .whitespacesAndNewlines), content:content, type:isSelected.rawValue, id: UUID())
+                                    }
+                                    
+                                }
                             }
 
                         } label: {
-                            Text("Save")
-                                .font(.custom(Font.shantellMed, size: 18))
-                                .foregroundColor(.white)
-                                .frame(width: 100, height: 40)
-                                .background(.blue)
-                                .cornerRadius(10)
+                            switch vm.resultState {
+                            case .loading:
+                                ProgressView()
+                                    .font(.custom(Font.shantellMed, size: 18))
+                                    .tint(.white)
+                                    .frame(width: 100, height: 40)
+                                    .background(.blue)
+                                    .cornerRadius(10)
+
+                            default:
+                                Text("Save")
+                                    .font(.custom(Font.shantellMed, size: 18))
+                                    .foregroundColor(.white)
+                                    .frame(width: 100, height: 40)
+                                    .background(.blue)
+                                    .cornerRadius(10)
+                            }
+                          
                         }
                     }
                     
@@ -71,7 +94,7 @@ struct CreateNoteView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack{
-                            ForEach(NoteType.allCases, id: \.hashValue ) {type in
+                            ForEach(Todo.TodoType.allCases, id: \.hashValue ) {type in
                                  
                                 Button {
                                     isSelected = type
@@ -107,6 +130,18 @@ struct CreateNoteView: View {
                 }
                 .padding(.horizontal)
                 .frame(maxHeight: .infinity, alignment:.topLeading)
+            }
+            .onChange(of: vm.resultState.isSuccess) { newValue in
+                if newValue == true {
+                    Task{
+                        noteVm.todoNote.removeAll()
+                        let res = await noteVm.getNotes()
+                        if !res.isEmpty {
+                            dismiss()
+                        }
+                    }
+                  
+                }
             }
         
         }
