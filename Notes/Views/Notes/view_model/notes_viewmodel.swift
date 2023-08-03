@@ -9,15 +9,14 @@ import Foundation
 
 
 class NotesViewModel : ObservableObject {
-    private let supabaseManager : SupaBaseManager
+    private var supabaseManager = SupaBaseManager.shared
     @Published var todoNote :  [[Todo]] = []
-    @Published var resultState: ResultState<[[Todo]]>
+    @Published var resultState: ResultState<[[Todo]]> = .idle
     @Published var hasError : Bool = false
     
     
-    init(supabaseManager: SupaBaseManager = SupaBaseManager.shared, resultState: ResultState<[[Todo]]> = .loading){
-        self.supabaseManager = supabaseManager
-        self.resultState = resultState
+    init(){
+     
         Task{
          await getNotes()
         }

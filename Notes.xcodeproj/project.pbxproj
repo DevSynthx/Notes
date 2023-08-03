@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1621732A7B24FA00A152E2 /* StateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1621722A7B24FA00A152E2 /* StateHandler.swift */; };
 		0C224A7E29BCDA4F0028D141 /* view_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C224A7D29BCDA4F0028D141 /* view_model.swift */; };
 		0C276BA329EAE48E00C9F8E9 /* Start_up_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C276BA229EAE48E00C9F8E9 /* Start_up_view.swift */; };
 		0C594B3029F3E5F000832991 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0C594B2F29F3E5F000832991 /* Supabase */; };
@@ -22,10 +23,9 @@
 		0CD58C6429E2EA35008C5101 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD58C6329E2EA35008C5101 /* extension.swift */; };
 		0CD58C6829E37056008C5101 /* Alkatra-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CD58C6729E37056008C5101 /* Alkatra-Medium.ttf */; };
 		0CD58C6A29E37920008C5101 /* Details_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD58C6929E37920008C5101 /* Details_View.swift */; };
-		0CD7279C29FDC01200BAC50A /* Network_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7279B29FDC01200BAC50A /* Network_Manager.swift */; };
+		0CD7279C29FDC01200BAC50A /* supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7279B29FDC01200BAC50A /* supabase.swift */; };
 		0CD727A029FDEE8600BAC50A /* notes_viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7279F29FDEE8600BAC50A /* notes_viewmodel.swift */; };
 		0CDDCC082A0AF1FA0055958C /* Static_mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDCC072A0AF1FA0055958C /* Static_mapper.swift */; };
-		0CDDCC0B2A0AFC790055958C /* error_handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDCC0A2A0AFC790055958C /* error_handler.swift */; };
 		0CDDCC102A0B191D0055958C /* create_notes_vm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDCC0F2A0B191D0055958C /* create_notes_vm.swift */; };
 		0CE29D3929B3E73C00B3601E /* ShantellSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CE29D3829B3E73C00B3601E /* ShantellSans-Light.ttf */; };
 		0CE29D3E29B3E76700B3601E /* ShantellSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CE29D3B29B3E76700B3601E /* ShantellSans-Medium.ttf */; };
@@ -41,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1621722A7B24FA00A152E2 /* StateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateHandler.swift; sourceTree = "<group>"; };
 		0C224A7D29BCDA4F0028D141 /* view_model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view_model.swift; sourceTree = "<group>"; };
 		0C276BA229EAE48E00C9F8E9 /* Start_up_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start_up_view.swift; sourceTree = "<group>"; };
 		0C594B3129F3E7F800832991 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
@@ -55,10 +56,9 @@
 		0CD58C6329E2EA35008C5101 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		0CD58C6729E37056008C5101 /* Alkatra-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Alkatra-Medium.ttf"; path = "../../../../Downloads/Alkatra/static/Alkatra-Medium.ttf"; sourceTree = "<group>"; };
 		0CD58C6929E37920008C5101 /* Details_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details_View.swift; sourceTree = "<group>"; };
-		0CD7279B29FDC01200BAC50A /* Network_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network_Manager.swift; sourceTree = "<group>"; };
+		0CD7279B29FDC01200BAC50A /* supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supabase.swift; sourceTree = "<group>"; };
 		0CD7279F29FDEE8600BAC50A /* notes_viewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notes_viewmodel.swift; sourceTree = "<group>"; };
 		0CDDCC072A0AF1FA0055958C /* Static_mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Static_mapper.swift; sourceTree = "<group>"; };
-		0CDDCC0A2A0AFC790055958C /* error_handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = error_handler.swift; sourceTree = "<group>"; };
 		0CDDCC0F2A0B191D0055958C /* create_notes_vm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = create_notes_vm.swift; sourceTree = "<group>"; };
 		0CE29D3829B3E73C00B3601E /* ShantellSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ShantellSans-Light.ttf"; sourceTree = "<group>"; };
 		0CE29D3B29B3E76700B3601E /* ShantellSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ShantellSans-Medium.ttf"; sourceTree = "<group>"; };
@@ -116,12 +116,12 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
-		0CD7279A29FDBFF700BAC50A /* NetworkManager */ = {
+		0CD7279A29FDBFF700BAC50A /* SupabaseManger */ = {
 			isa = PBXGroup;
 			children = (
-				0CD7279B29FDC01200BAC50A /* Network_Manager.swift */,
+				0CD7279B29FDC01200BAC50A /* supabase.swift */,
 			);
-			path = NetworkManager;
+			path = SupabaseManger;
 			sourceTree = "<group>";
 		};
 		0CD7279E29FDEE6E00BAC50A /* Notes */ = {
@@ -140,12 +140,12 @@
 			path = Mapper;
 			sourceTree = "<group>";
 		};
-		0CDDCC092A0AFC5E0055958C /* Error-handler */ = {
+		0CDDCC092A0AFC5E0055958C /* StateHandler */ = {
 			isa = PBXGroup;
 			children = (
-				0CDDCC0A2A0AFC790055958C /* error_handler.swift */,
+				0C1621722A7B24FA00A152E2 /* StateHandler.swift */,
 			);
-			path = "Error-handler";
+			path = StateHandler;
 			sourceTree = "<group>";
 		};
 		0CDDCC0C2A0B18320055958C /* view_model */ = {
@@ -235,8 +235,8 @@
 		0CE46BDF29AC20ED00D6E038 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				0CDDCC092A0AFC5E0055958C /* Error-handler */,
-				0CD7279A29FDBFF700BAC50A /* NetworkManager */,
+				0CDDCC092A0AFC5E0055958C /* StateHandler */,
+				0CD7279A29FDBFF700BAC50A /* SupabaseManger */,
 				0CD58C6229E2EA0E008C5101 /* extension */,
 				0C224A7C29BCDA310028D141 /* View_Model */,
 				0C9701FE29B5437D00845835 /* Views */,
@@ -357,11 +357,11 @@
 				0C276BA329EAE48E00C9F8E9 /* Start_up_view.swift in Sources */,
 				0CBEB3DB2A112DBA00751DEF /* Delete_vm.swift in Sources */,
 				0C224A7E29BCDA4F0028D141 /* view_model.swift in Sources */,
-				0CDDCC0B2A0AFC790055958C /* error_handler.swift in Sources */,
+				0C1621732A7B24FA00A152E2 /* StateHandler.swift in Sources */,
 				0CDDCC082A0AF1FA0055958C /* Static_mapper.swift in Sources */,
 				0C97020029B5439500845835 /* CreateNoteView.swift in Sources */,
 				0CBEB3DD2A11393C00751DEF /* Update_vm.swift in Sources */,
-				0CD7279C29FDC01200BAC50A /* Network_Manager.swift in Sources */,
+				0CD7279C29FDC01200BAC50A /* supabase.swift in Sources */,
 				0CC5DF1D29EB1871000CF2DB /* CardWidget.swift in Sources */,
 				0C594B3229F3E7F800832991 /* Todo.swift in Sources */,
 				0CD58C6429E2EA35008C5101 /* extension.swift in Sources */,
