@@ -10,16 +10,10 @@ import Foundation
 
 class DeleteNoteViewModel: ObservableObject {
     
-    private let supabaseManager : SupaBaseManager
-    //@Published var notes: NotesViewModel
-    @Published var resultState: ResultState<[[Todo]]>
+    private var supabaseManager = SupaBaseManager.shared
+    @Published var resultState: ResultState<[[Todo]]> = .idle
     @Published var hasError : Bool = false
-    
-    
-    init(supabaseManager: SupaBaseManager = SupaBaseManager.shared, resultState: ResultState<[[Todo]]> = .idle){
-        self.supabaseManager = supabaseManager
-        self.resultState = resultState
-    }
+
     
     func deleteNote(id: UUID) async -> [Todo] {
         do {

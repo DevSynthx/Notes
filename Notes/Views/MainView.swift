@@ -24,7 +24,7 @@ struct MainView: View {
     var someColor = #colorLiteral(red: 0.5563425422, green: 0.9793455005, blue: 0, alpha: 1)
     @Namespace var animation
     @State var modelBaseType : [[SampleModel]] = []
-    @StateObject private var vm = NoteViewModel()
+//    @StateObject private var vm = NoteViewModel()
     @EnvironmentObject private var newVm : NotesViewModel
 
     var body: some View {

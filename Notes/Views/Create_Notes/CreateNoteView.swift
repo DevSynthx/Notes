@@ -143,6 +143,12 @@ struct CreateNoteView: View {
                   
                 }
             }
+            .alert("Error", isPresented: $vm.hasError, actions: {
+                Button("Cancel", role: .cancel, action: {})
+            }, message: {
+                Text(vm.resultState.errorDescription ?? "")
+            })
+           
         
         }
      

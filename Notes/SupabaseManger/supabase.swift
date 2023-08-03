@@ -17,9 +17,10 @@ protocol SupaBaseService {
 }
 
 
-struct SupaBaseManager : SupaBaseService {
+class SupaBaseManager : SupaBaseService {
     private var client = SupabaseClient(supabaseURL: .supaBaseUrl(), supabaseKey: Constant.apiKey)
      static let shared = SupaBaseManager()
+    
     
     
     func getNotes() async throws -> [Todo] {
@@ -30,26 +31,11 @@ struct SupaBaseManager : SupaBaseService {
         catch{
             throw ResultState<[Todo]>.failedToDecode(error: error)
         }
-       
-        
-//        let decoder = JSONDecoder()
-//        decoder.dateDecodingStrategy = .iso8601
-//        let decoded = try decoder.decode([Todo].self, from: result.underlyingResponse.data)
-//        return decoded
     }
     
     func createNotes(todo: Todo) async throws -> Void {
        try await client.database.from("Notes").insert(values: todo).execute()
-//                let decoder = JSONDecoder()
-//                decoder.dateDecodingStrategy = .iso8601
-//                let decoded = try decoder.decode(Todo.self, from: result.underlyingResponse.data)
-//                return decoded
-//        do{
-//            return try JsonMapper().decode(type: [Todo].self, data: result.underlyingResponse.data)
-//        }
-//        catch{
-//            throw ResultState<[Todo]>.failedToDecode(error: error)
-//        }
+
     }
     
     func updateNotes(todo: Todo) async throws -> [Todo] {

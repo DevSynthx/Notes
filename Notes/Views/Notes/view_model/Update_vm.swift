@@ -9,16 +9,11 @@ import Foundation
 
 
 class UpdateNoteViewModel: ObservableObject {
-    
-    private let supabaseManager : SupaBaseManager
-    @Published var resultState: ResultState<[[Todo]]>
+    private var supabaseManager = SupaBaseManager.shared
+    @Published var resultState: ResultState<[[Todo]]> = .idle
     @Published var hasError : Bool = false
     
-    
-    init(supabaseManager: SupaBaseManager = SupaBaseManager.shared, resultState: ResultState<[[Todo]]> = .idle){
-        self.supabaseManager = supabaseManager
-        self.resultState = resultState
-    }
+
     
     func updateNote(title: String, content: String, type: String, id: UUID) async -> [Todo] {
         do {
